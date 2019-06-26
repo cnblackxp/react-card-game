@@ -1,0 +1,202 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* .GameContainer {
+  margin: 15px;
+} */
+
+.GameHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.GameHeader div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.CardContainer {
+  width: 175px;
+  height: 225px;
+  border: 1px solid #fafafa;
+  border-radius: 4px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  transition: 0.25s transform;
+}
+
+.CardContainerHover {
+  transform: translate(0px, -175px);
+  transition: 0.15s transform;
+}
+
+.CardContainer:hover {
+  cursor: pointer;
+}
+
+
+.CardHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.CardName {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  text-indent: 5px;
+  font-size: 1.25rem;
+}
+
+/* circle container style */
+.CardMana,
+.CardAttackMana,
+.CardAttack {
+  background-color: #c4c4c4;
+  border-radius: 50%;
+  padding: 5px;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+}
+
+.CardAttackMana,
+.CardAttack {
+  margin-left: 2px;
+}
+
+.CardMana {background-color: #7befb2}
+.CardAttackMana {background-color: #d5b8ff}
+.CardAttack {background-color: #ec644b}
+
+.CardImage {
+  background-color: #ccc;
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.CardsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 100%;
+  background-color: #bbb;
+  padding: 20px 0;
+
+  /* height: 200px; */
+
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+}
+
+/* .GameBoard {
+  position: relative;
+  transform-origin: 0 0;
+} */
+
+.GameBoardRow .CardContainer {
+  transform: scale(0.5);
+  transform-origin: 0 0;
+}
+
+.GameBoardRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 125px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #67809f;
+  position: relative;
+  transform-origin: 0 0;
+}
+
+.GameBoardRow.EnemyRow {
+  background-color: #d64541;
+}
+
+.EnemyStats {
+  color: #d64541;
+}
+
+.PlayerStats {
+  color: #67809f;
+}
+
+
+.ChoiceDialog {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  border-radius: 4px;
+  border: 1px solid #fafafa;
+  padding: 20px;
+  background: #fff;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  -webkit-box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.75);
+
+}
+
+.ChoiceDialog button {
+  width: 100%;
+}
+
+.ChoiceDialogContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+.ChoiceDialogContainer .Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+.CloseChoiceDialogButton {
+  background-color: #d91e18;
+  border: 1px solid #fafafa;
+  border-radius: 4px;
+  color: #fff;
+}
